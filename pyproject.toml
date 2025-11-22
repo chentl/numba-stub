@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "numba-stub"
+description = "Lightweight stub implementations of Numba decorators, allowing code to run and be debugged without installing Numba, reducing dependency size."
+classifiers = [
+    "License :: OSI Approved :: MIT License"
+]
+dynamic = ["version"]
+
+[project.urls]
+Home = "https://github.com/chentl/numba-stub"
+
+[tool.flit.module]
+name = "numba"
