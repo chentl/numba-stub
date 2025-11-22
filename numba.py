@@ -22,7 +22,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 import functools
 
-__version__ = "1.0.0"
+__version__ = "1.1.1"
 
 
 # https://stackoverflow.com/questions/3888158
@@ -103,3 +103,14 @@ ulong = None
 ulonglong = None
 ushort = None
 void = None
+
+
+from types import ModuleType
+import sys
+
+
+class typed(ModuleType):
+    List = list
+
+
+sys.modules[__name__ + "." + "typed"] = typed("typed")
